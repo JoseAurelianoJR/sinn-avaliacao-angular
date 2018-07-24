@@ -17,6 +17,10 @@ export class UserService {
 
   user: User;
 
+  getAll(){
+    return this.http.get<any[]>('http://ec2-13-59-74-180.us-east-2.compute.amazonaws.com:8000/api/usuarios');
+  }
+
   getUser() {
     return this.user;
   }
